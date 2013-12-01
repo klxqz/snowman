@@ -1,0 +1,49 @@
+<style>
+    #snowman{
+        position: absolute;
+        left: {$settings.left}px;
+        top: {$settings.top}px;
+    }
+</style>
+<script>
+var snowmanswf = "{$wa_app_static_url}plugins/snowman/swf/snowman.swf";
+var snowmantext = '{$settings.text}';
+document.write(
+		'<div id="snowman">'+
+			'<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="355" id="sber_snowman" align="middle">'+
+				'<param name="movie" value="' + snowmanswf + '" />'+
+				'<param name="quality" value="high" />'+
+				'<param name="bgcolor" value="#ffffff" />'+
+				'<param name="play" value="true" />'+
+				'<param name="loop" value="true" />'+
+				'<param name="wmode" value="transparent" />'+
+				'<param name="scale" value="showall" />'+
+				'<param name="menu" value="true" />'+
+				'<param name="devicefont" value="false" />'+
+				'<param name="salign" value="" />'+
+				'<param name="allowScriptAccess" value="sameDomain" />'+
+				'<!--[if !IE]>-->'+
+				'<object type="application/x-shockwave-flash" data="' + snowmanswf + '" width="400" height="355">'+
+					'<param name="movie" value="' + snowmanswf + '" />'+
+					'<param name="quality" value="high" />'+
+					'<param name="bgcolor" value="#ffffff" />'+
+					'<param name="play" value="true" />'+
+					'<param name="loop" value="true" />'+
+					'<param name="wmode" value="transparent" />'+
+					'<param name="scale" value="showall" />'+
+					'<param name="menu" value="true" />'+
+					'<param name="devicefont" value="false" />'+
+					'<param name="salign" value="" />'+
+					'<param name="allowScriptAccess" value="sameDomain" />'+
+				'<!--<![endif]-->'+
+					'<a href="http://www.adobe.com/go/getflash">'+
+						'<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />'+
+					'</a>'+
+				'<!--[if !IE]>-->'+
+				'</object>'+
+				'<!--<![endif]-->'+
+			'</object>'+
+                       '<div>' + snowmantext + '</div>'+
+		'</div>'
+);
+</script>
