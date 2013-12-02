@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @author Коробов Николай wa-plugins.ru <support@wa-plugins.ru>
+ * @link http://wa-plugins.ru/
+ */
 class shopSnowmanPlugin extends shopPlugin {
 
     protected static $plugin;
@@ -38,10 +42,10 @@ class shopSnowmanPlugin extends shopPlugin {
 
     protected function checkFirstVisit() {
         $session = wa()->getStorage();
-        if ($session->read('FirstVisit')) {
+        if ($session->read('SnowmanFirstVisit')) {
             return true;
         } else {
-            $session->write('FirstVisit', 1);
+            $session->write('SnowmanFirstVisit', 1);
             return false;
         }
     }
